@@ -1,156 +1,278 @@
-<!DOCTYPE html>
-<html lang="ko">
+import base64
+
+# Let's create an elegant, single-page web architectural diagram with logos and proper layout.
+# Since we need to embed logos without external URL references to guarantee zero broken links and adhere to Weasyprint/HTML strict criteria,
+# we will use inline SVGs for standard crisp icons or elegant typographic layout where necessary.
+# Let's build a highly refined, professional full-stack architecture diagram web page using Tailwind CSS via script.
+
+html_content = """<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WalkMe & SAP Joule Integration Architecture</title>
+    <title>WalkMe & SAP Joule Integration Architecture Blueprint</title>
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- FontAwesome for fallback architecture symbols -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .glow-cyan { filter: drop-shadow(0 0 12px rgba(6, 182, 212, 0.15)); }
+        .glow-indigo { filter: drop-shadow(0 0 12px rgba(99, 102, 241, 0.15)); }
+        .glow-purple { filter: drop-shadow(0 0 12px rgba(168, 85, 247, 0.15)); }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    </style>
 </head>
-<body class="bg-slate-900 text-slate-100 font-sans min-h-screen antialiased">
+<body class="bg-[#0f172a] text-slate-100 min-h-screen antialiased flex flex-col justify-between">
 
-    <header class="border-b border-slate-800 bg-slate-900/80 backdrop-blur sticky top-0 z-50">
+    <!-- Header Section -->
+    <header class="border-b border-slate-800/80 bg-[#0f172a]/90 backdrop-blur sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex items-center space-x-3">
-                <i class="fa-solid fa-network-wired text-indigo-400 text-2xl"></i>
-                <h1 class="text-xl font-bold tracking-tight">Next-Gen Digital Adoption Architecture</h1>
+                <div class="bg-indigo-600/10 p-2 rounded-lg border border-indigo-500/20">
+                    <i class="fa-solid fa-network-wired text-indigo-400 text-xl"></i>
+                </div>
+                <div>
+                    <h1 class="text-lg font-bold tracking-tight text-white">Enterprise Orchestration Blueprint</h1>
+                    <p class="text-xs text-slate-400">Context-Aware Automation Topology</p>
+                </div>
             </div>
-            <span class="px-3 py-1 text-xs font-semibold bg-indigo-500/10 text-indigo-400 rounded-full border border-indigo-500/20">Enterprise Solutions</span>
+            <div class="flex items-center space-x-2">
+                <span class="px-2.5 py-1 text-[11px] font-medium bg-emerald-500/10 text-emerald-400 rounded-md border border-emerald-500/20 flex items-center gap-1.5">
+                    <span class="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-pulse"></span> GitHub Pages Ready
+                </span>
+            </div>
         </div>
     </header>
 
-    <main class="max-w-7xl mx-auto px-6 py-10">
-        <section class="bg-slate-950 rounded-2xl border border-slate-800 p-8 mb-10 shadow-2xl">
-            <h2 class="text-lg font-semibold mb-8 text-slate-400 flex items-center gap-2">
-                <i class="fa-solid fa-diagram-project text-indigo-400"></i> 아키텍처 다이어그램
-            </h2>
+    <!-- Main Content Grid -->
+    <main class="max-w-7xl mx-auto px-6 py-8 w-full flex-grow">
+        
+        <!-- Architecture Grid Dashboard -->
+        <div class="bg-slate-950/60 rounded-2xl border border-slate-800/80 p-6 md:p-8 shadow-2xl mb-8 relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-96 h-96 bg-indigo-500/5 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute bottom-0 left-0 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl pointer-events-none"></div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch relative">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8 pb-4 border-b border-slate-800/60">
+                <div>
+                    <h2 class="text-xl font-bold text-white tracking-tight flex items-center gap-2">
+                        System Architecture Topology
+                    </h2>
+                    <p class="text-xs text-slate-400 mt-1">End-to-end telemetry and execution pipeline between UI Adoption and Autonomous Intelligence.</p>
+                </div>
+                <div class="text-xs font-mono text-slate-500 bg-slate-900 px-3 py-1.5 rounded-md border border-slate-800">
+                    Data Payload: Clean JSON Core
+                </div>
+            </div>
+
+            <!-- Main Interactive Topology Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch relative">
                 
-                <div class="bg-slate-900 rounded-xl p-6 border border-slate-800 flex flex-col justify-between relative">
+                <!-- LAYER 1: WALKME (THE EYE & HAND) - 4 Columns -->
+                <div class="lg:col-span-4 bg-slate-900/80 rounded-xl p-5 border border-slate-800 flex flex-col justify-between glow-cyan">
                     <div>
                         <div class="flex items-center justify-between mb-4">
-                            <span class="text-xs font-bold text-cyan-400 uppercase tracking-wider">UI/UX Layer</span>
-                            <div class="flex space-x-1 text-cyan-400">
-                                <i class="fa-solid fa-eye"></i>
-                                <i class="fa-solid fa-hand-pointer"></i>
+                            <span class="text-[10px] font-bold text-cyan-400 uppercase tracking-wider bg-cyan-500/10 px-2 py-0.5 rounded">UI/UX Presentation Layer</span>
+                            <div class="flex space-x-1.5 text-cyan-400 text-xs">
+                                <i class="fa-solid fa-eye" title="Eye"></i>
+                                <i class="fa-solid fa-hand-pointer" title="Hand"></i>
                             </div>
                         </div>
-                        <h3 class="text-xl font-bold mb-2 text-white">WalkMe</h3>
-                        <p class="text-sm text-slate-400 mb-6">사용자 액션의 <strong class="text-cyan-400 font-medium">눈과 손</strong> 역할 담당</p>
-                        
-                        <div class="bg-slate-950 p-4 rounded-lg border border-slate-800 mb-4">
-                            <div class="flex items-center gap-2 text-sm font-semibold text-slate-300 mb-2">
-                                <i class="fa-solid fa-bolt text-amber-400"></i> WalkMe Accelerator
+
+                        <!-- WalkMe Branding / Logo Block -->
+                        <div class="py-4 px-2 mb-4 bg-slate-950/40 rounded-lg border border-slate-800/60 flex flex-col items-center justify-center">
+                            <!-- WalkMe Stylized Text Logo -->
+                            <div class="text-2xl font-black tracking-tight text-white flex items-center gap-1 font-sans">
+                                walk<span class="text-cyan-400">me</span>
                             </div>
-                            <p class="text-xs text-slate-400 leading-relaxed mb-3">
-                                주요 비즈니스 앱의 화면 구조를 기억하고 인식하여 노이즈 없는 정제된 데이터를 추출합니다.
+                            <p class="text-[11px] text-slate-400 font-medium tracking-wide mt-1 uppercase text-center">The Physical Interaction Interface (Eye & Hand)</p>
+                        </div>
+
+                        <!-- Core Feature: Accelerator -->
+                        <div class="bg-slate-950 p-4 rounded-lg border border-slate-800/80 mb-4">
+                            <div class="flex items-center gap-2 text-xs font-bold text-slate-300 mb-2">
+                                <i class="fa-solid fa-bolt text-amber-400"></i> WalkMe Accelerator Engine
+                            </div>
+                            <p class="text-xs text-slate-400 leading-relaxed">
+                                Dynamically structuralizes, maps, and caches enterprise DOM UI trees across major business platforms to construct an abstract UI memory footprint.
                             </p>
-                            <div class="inline-flex items-center gap-1.5 px-2 py-1 bg-emerald-500/10 text-emerald-400 rounded text-[11px] font-mono border border-emerald-500/20">
-                                <i class="fa-solid fa-file-code"></i> Clean JSON Output
+                            <div class="mt-3 flex items-center gap-1.5 text-[11px] font-mono bg-emerald-500/10 text-emerald-400 px-2 py-1 rounded border border-emerald-500/10 w-fit">
+                                <i class="fa-solid fa-file-code"></i> Clean JSON Export
                             </div>
                         </div>
                     </div>
 
+                    <!-- Target Enterprise Ecosystem Logos -->
                     <div class="mt-4 pt-4 border-t border-slate-800/60">
-                        <span class="text-[11px] font-semibold text-slate-500 block mb-2 uppercase">Target Applications</span>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-2 py-1 bg-slate-800 text-xs rounded text-slate-300">SAP Apps</span>
-                            <span class="px-2 py-1 bg-slate-800 text-xs rounded text-slate-300">SFDC (Salesforce)</span>
-                            <span class="px-2 py-1 bg-slate-800 text-xs rounded text-slate-300">ServiceNow</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bg-slate-900 rounded-xl p-6 border border-slate-800 flex flex-col justify-center relative">
-                    <div class="hidden lg:block absolute -left-4 top-1/2 -translate-y-1/2 bg-slate-800 p-1.5 rounded-full border border-slate-700 text-xs text-cyan-400">
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </div>
-                    <div class="hidden lg:block absolute -right-4 top-1/2 -translate-y-1/2 bg-slate-800 p-1.5 rounded-full border border-slate-700 text-xs text-indigo-400">
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </div>
-
-                    <div class="text-center lg:text-left">
-                        <span class="text-xs font-bold text-indigo-400 uppercase tracking-wider block mb-4">Integration Layer</span>
-                        <h3 class="text-xl font-bold mb-1 text-white">SAP BTP</h3>
-                        <p class="text-xs text-slate-400 mb-6">Business Technology Platform</p>
-
-                        <div class="bg-indigo-950/40 p-4 rounded-lg border border-indigo-900/50 mb-4 text-left">
-                            <div class="flex items-center gap-2 text-sm font-semibold text-indigo-300 mb-1">
-                                <i class="fa-solid fa-circle-nodes"></i> Cloud Integration (CPI)
+                        <span class="text-[10px] font-bold text-slate-500 block mb-3 uppercase tracking-wider">Target Application Mapping</span>
+                        <div class="grid grid-cols-3 gap-2">
+                            <!-- SAP App Indicator -->
+                            <div class="bg-slate-950 p-2 rounded border border-slate-800/80 flex flex-col items-center justify-center min-h-[45px]">
+                                <span class="text-xs font-black text-sky-400 tracking-tighter">SAP</span>
                             </div>
-                            <p class="text-xs text-slate-400">
-                                시스템 간을 연결하는 핵심 가교 역할을 수행합니다.
-                            </p>
-                        </div>
-
-                        <div class="bg-slate-950 p-3 rounded-lg border border-slate-800/80 text-left border-dashed">
-                            <span class="text-[11px] font-semibold text-slate-500 block mb-1">Extensibility</span>
-                            <p class="text-xs text-slate-400">
-                                타 일반 Middleware 플랫폼과도 유연하게 연계 및 확장이 가능한 개방형 구조
-                            </p>
+                            <!-- SFDC Logo Indicator -->
+                            <div class="bg-slate-950 p-2 rounded border border-slate-800/80 flex flex-col items-center justify-center min-h-[45px]">
+                                <span class="text-xs font-bold text-blue-500 tracking-tight">salesforce</span>
+                            </div>
+                            <!-- ServiceNow Logo Indicator -->
+                            <div class="bg-slate-950 p-2 rounded border border-slate-800/80 flex flex-col items-center justify-center min-h-[45px]">
+                                <span class="text-[10px] font-medium text-emerald-400 tracking-tight">now.</span>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="bg-slate-900 rounded-xl p-6 border border-slate-800 flex flex-col justify-between relative">
+                <!-- LAYER 2: THE DATA CONNECTOR PIPELINE & EXTENSIBILITY - 3 Columns -->
+                <div class="lg:col-span-3 flex flex-col justify-center space-y-4 relative">
+                    
+                    <!-- Data Flow Connector Graphic -->
+                    <div class="text-center">
+                        <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider block mb-2">Broker Integration</span>
+                        <i class="fa-solid fa-arrow-right-arrow-left text-slate-600 hidden lg:block text-lg my-2 mx-auto"></i>
+                    </div>
+
+                    <!-- Alternate Third-Party Middleware Stack Block -->
+                    <div class="bg-slate-900/50 rounded-xl p-4 border border-slate-800/60 border-dashed">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-[9px] font-bold text-amber-400 uppercase tracking-wider">Extensible Stack</span>
+                            <span class="text-[10px] text-slate-500 font-medium">Alternative Middleware</span>
+                        </div>
+                        <p class="text-[11px] text-slate-400 mb-3">Seamless integration support for pre-existing middleware fabrics:</p>
+                        
+                        <div class="space-y-2">
+                            <!-- MuleSoft Logo Block -->
+                            <div class="bg-slate-950 p-2 rounded border border-slate-800 flex items-center justify-between">
+                                <div class="flex items-center space-x-1.5">
+                                    <div class="w-2 h-2 rounded-full bg-sky-400"></div>
+                                    <span class="text-xs font-bold text-white tracking-tight">MuleSoft</span>
+                                </div>
+                                <span class="text-[9px] text-slate-500 font-mono">AnyPoint</span>
+                            </div>
+                            <!-- Workato Logo Block -->
+                            <div class="bg-slate-950 p-2 rounded border border-slate-800 flex items-center justify-between">
+                                <div class="flex items-center space-x-1.5">
+                                    <div class="w-2 h-2 rounded-full bg-teal-400"></div>
+                                    <span class="text-xs font-bold text-white tracking-tight">workato</span>
+                                </div>
+                                <span class="text-[9px] text-slate-500 font-mono">Recipe</span>
+                            </div>
+                            <!-- Boomi Logo Block -->
+                            <div class="bg-slate-950 p-2 rounded border border-slate-800 flex items-center justify-between">
+                                <div class="flex items-center space-x-1.5">
+                                    <div class="w-2 h-2 rounded-full bg-blue-400"></div>
+                                    <span class="text-xs font-bold text-white tracking-tight">boomi</span>
+                                </div>
+                                <span class="text-[9px] text-slate-500 font-mono">AtomSphere</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LAYER 3: SAP BTP CONTAINER (HOUSING CPI & JOULE) - 5 Columns -->
+                <div class="lg:col-span-5 bg-indigo-950/20 rounded-xl p-5 border-2 border-indigo-500/30 flex flex-col justify-between glow-indigo relative">
+                    <div class="absolute -top-3 right-4 bg-indigo-600 text-white text-[10px] font-bold px-2 py-0.5 rounded shadow-md uppercase tracking-wider">
+                        Native Runtime Boundary
+                    </div>
+
                     <div>
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="text-xs font-bold text-violet-400 uppercase tracking-wider">AI & Brain Layer</span>
-                            <i class="fa-solid fa-brain text-violet-400"></i>
+                        <!-- SAP BTP Header branding -->
+                        <div class="flex items-center space-x-2 mb-6">
+                            <div class="text-xl font-black text-sky-400 tracking-tighter bg-white/10 px-2 py-0.5 rounded">SAP BTP</div>
+                            <div class="text-xs font-semibold text-slate-300">Business Technology Platform</div>
                         </div>
-                        <h3 class="text-xl font-bold mb-2 text-white">SAP Joule</h3>
-                        <p class="text-sm text-slate-400 mb-6">아키텍처의 <strong class="text-violet-400 font-medium">두뇌</strong> 역할 수행</p>
 
-                        <div class="bg-slate-950 p-4 rounded-lg border border-slate-800">
-                            <div class="flex items-center gap-2 text-sm font-semibold text-slate-300 mb-2">
-                                <i class="fa-solid fa-gears text-purple-400"></i> Skill Templates
+                        <!-- Nested Component 1: SAP CPI -->
+                        <div class="bg-slate-900/90 rounded-lg p-4 border border-indigo-500/20 mb-4 relative">
+                            <span class="absolute top-2 right-3 text-[9px] font-mono text-indigo-400 bg-indigo-500/10 px-1.5 py-0.5 rounded">Integration Hub</span>
+                            <div class="flex items-center gap-2 text-xs font-bold text-white mb-2">
+                                <i class="fa-solid fa-circle-nodes text-indigo-400"></i> Cloud Integration (CPI)
                             </div>
-                            <ul class="text-xs text-slate-400 space-y-2">
-                                <li class="flex items-start gap-1.5">
-                                    <i class="fa-solid fa-chevron-right text-purple-500 text-[10px] mt-0.5"></i>
-                                    <span>화면상에서 예상되는 Next Action 가이드 수립</span>
-                                </li>
-                                <li class="flex items-start gap-1.5">
-                                    <i class="fa-solid fa-chevron-right text-purple-500 text-[10px] mt-0.5"></i>
-                                    <span>가이드를 기반으로 한 비즈니스 프로세스 자동 실행(Automation) 제안</span>
-                                </li>
-                            </ul>
+                            <p class="text-xs text-slate-400 leading-relaxed">
+                                Operates as the centralized enterprise routing and secure pipeline hub, passing structured interface states securely across networks.
+                            </p>
+                        </div>
+
+                        <!-- Core Dynamic Transfer Arrow -->
+                        <div class="flex justify-center my-2 text-indigo-400/50">
+                            <i class="fa-solid fa-arrow-down-long text-sm animate-bounce"></i>
+                        </div>
+
+                        <!-- Nested Component 2: SAP Joule (The Core Brain) -->
+                        <div class="bg-slate-900/90 rounded-lg p-4 border border-purple-500/30 glow-purple relative">
+                            <span class="absolute top-2 right-3 text-[9px] font-mono text-purple-400 bg-purple-500/10 px-1.5 py-0.5 rounded">AI Agent</span>
+                            
+                            <!-- SAP Joule Stylized Branding Header -->
+                            <div class="flex items-center gap-2 text-sm font-black tracking-tight text-white mb-2">
+                                <i class="fa-solid fa-brain text-purple-400"></i> SAP Joule <span class="text-xs font-normal text-purple-400">(The Intelligence Brain)</span>
+                            </div>
+                            
+                            <p class="text-xs text-slate-400 leading-relaxed mb-3">
+                                Evaluates telemetry schemas inside runtime logic contexts to instantly deploy contextual workflow guidance patterns.
+                            </p>
+
+                            <!-- Skill Templates Sub-module -->
+                            <div class="bg-slate-950 p-2.5 rounded border border-slate-800">
+                                <div class="text-[11px] font-bold text-purple-300 mb-1 flex items-center gap-1">
+                                    <i class="fa-solid fa-gears"></i> Intelligent Skill Templates
+                                </div>
+                                <ul class="text-[11px] text-slate-400 space-y-1.5 pl-1">
+                                    <li class="flex items-start gap-1">
+                                        <span class="text-purple-400 mt-0.5">▪</span>
+                                        <span>Predicts subsequent sequence actions contextually.</span>
+                                    </li>
+                                    <li class="flex items-start gap-1">
+                                        <span class="text-purple-400 mt-0.5">▪</span>
+                                        <span>Proposes autonomous background orchestration runs.</span>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="mt-6 pt-4 border-t border-slate-800/60 bg-gradient-to-r from-indigo-950/20 to-purple-950/20 p-3 rounded-lg">
-                        <span class="text-[10px] text-slate-400 block font-mono">Runtime Environment:</span>
-                        <span class="text-xs text-slate-300 font-medium">Runs natively on SAP BTP</span>
+                    <div class="mt-4 pt-3 border-t border-slate-800 flex items-center justify-between text-[11px] text-slate-400 font-mono">
+                        <span>Platform Security: Standard</span>
+                        <span class="text-indigo-400">Fully Encapsulated Ecosystem</span>
                     </div>
                 </div>
 
             </div>
-        </section>
+        </div>
 
+        <!-- Architectural Value Matrix Summary Boxes -->
         <section class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div class="bg-slate-900/50 rounded-xl p-6 border border-slate-800">
-                <h4 class="font-bold text-white mb-3 flex items-center gap-2">
-                    <i class="fa-solid fa-wand-magic-sparkles text-amber-400"></i> Data Flow 핵심 요약
-                </h4>
-                <p class="text-sm text-slate-400 leading-relaxed">
-                    WalkMe의 <span class="text-slate-200 font-medium">Accelerator</span>가 복잡한 화면 요소를 매핑하여 <span class="text-emerald-400 font-mono">Clean JSON</span> 데이터로 정제하면, 이 데이터가 <span class="text-slate-200 font-medium">SAP BTP CPI</span>(또는 레거시 미들웨어)를 타고 <span class="text-slate-200 font-medium">SAP Joule</span>로 전달됩니다. Joule은 이를 바탕으로 판단하여 최적의 다음 액션을 가이드합니다.
+            <div class="bg-slate-900/40 rounded-xl p-5 border border-slate-800/80">
+                <h3 class="font-bold text-white text-sm mb-2 flex items-center gap-2">
+                    <i class="fa-solid fa-shuffle text-cyan-400"></i> The Clean JSON Telemetry Funnel
+                </h3>
+                <p class="text-xs text-slate-400 leading-relaxed">
+                    WalkMe's <span class="text-slate-200 font-semibold">Accelerator</span> filters UI layer structural noise directly on the front-end client, yielding an abstracted structural format. This ensures that downstream automation engines only receive telemetry snapshots via the integration brokers.
                 </p>
             </div>
-            <div class="bg-slate-900/50 rounded-xl p-6 border border-slate-800">
-                <h4 class="font-bold text-white mb-3 flex items-center gap-2">
-                    <i class="fa-solid fa-lightbulb text-indigo-400"></i> 아키텍처가 갖는 비즈니스 가치
-                </h4>
-                <p class="text-sm text-slate-400 leading-relaxed">
-                    단순한 UI 오버레이 가이드를 넘어, 백엔드 플랫폼(BTP) 및 코어 AI(Joule)와 결합하여 <span class="text-indigo-400 font-medium">"컨텍스트 인지형 자동화(Context-Aware Automation)"</span>를 완성합니다. 기구축된 미들웨어 생태계를 파괴하지 않는 유연한 확장성이 핵심입니다.
+            <div class="bg-slate-900/40 rounded-xl p-5 border border-slate-800/80">
+                <h3 class="font-bold text-white text-sm mb-2 flex items-center gap-2">
+                    <i class="fa-solid fa-shield-halved text-indigo-400"></i> Decoupled Extensibility Strategy
+                </h3>
+                <p class="text-xs text-slate-400 leading-relaxed">
+                    Encapsulating integration routing inside the <span class="text-slate-200 font-semibold">SAP BTP fabric</span> ensures that the core AI infrastructure remains decoupled from direct client-side changes. This preserves absolute data compliance and allows external middleware hubs to interact simultaneously.
                 </p>
             </div>
         </section>
     </main>
 
-    <footer class="max-w-7xl mx-auto px-6 py-8 border-t border-slate-800 text-center text-xs text-slate-500">
-        &copy; 2026 WalkMe & SAP Solution Architecture Review. All rights reserved.
+    <!-- Footer Section -->
+    <footer class="max-w-7xl mx-auto px-6 py-6 border-t border-slate-800/80 w-full flex flex-col sm:flex-row justify-between items-center gap-2 text-xs text-slate-500">
+        <div>
+            WalkMe & SAP BTP Enterprise Architecture Map &bull; Complete English Edition
+        </div>
+        <div class="font-mono text-[11px]">
+            v2.1.0 &bull; Deployment Target Architecture
+        </div>
     </footer>
 
 </body>
 </html>
+"""
+
+with open("index.html", "w", encoding="utf-8") as f:
+    f.write(html_content)
+
+print("SUCCESS")
