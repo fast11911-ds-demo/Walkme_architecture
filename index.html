@@ -1,29 +1,62 @@
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-.page{padding:2rem 1.5rem;max-width:980px;margin:0 auto;font-family:var(--font-sans)}
+.page{padding:2rem 1.5rem;max-width:980px;margin:0 auto;font-family:sans-serif}
 .hero{text-align:center;margin-bottom:2rem}
-.hero h1{font-size:22px;font-weight:500;color:var(--color-text-primary);margin-bottom:0.5rem;line-height:1.4}
-.hero p{font-size:13px;color:var(--color-text-secondary);line-height:1.7;max-width:680px;margin:0 auto}
-.new-tag{display:inline-block;font-size:10px;font-weight:500;padding:2px 7px;border-radius:4px;background:var(--color-background-danger);color:var(--color-text-danger);vertical-align:middle;margin-left:6px;letter-spacing:0.04em}
-.section-label{font-size:11px;font-weight:500;letter-spacing:0.07em;text-transform:uppercase;color:var(--color-text-tertiary);margin:2rem 0 0.75rem}
-.legend{display:flex;flex-wrap:wrap;gap:12px;margin-top:1.5rem;padding:0.75rem 1rem;border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-md)}
-.legend-item{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--color-text-secondary)}
+.hero h1{font-size:22px;font-weight:500;color:#1a1a1a;margin-bottom:0.5rem;line-height:1.4}
+.hero p{font-size:13px;color:#555;line-height:1.7;max-width:680px;margin:0 auto}
+.new-tag{display:inline-block;font-size:10px;font-weight:500;padding:2px 7px;border-radius:4px;background:#FCEBEB;color:#A32D2D;vertical-align:middle;margin-left:6px;letter-spacing:0.04em}
+.section-label{font-size:11px;font-weight:500;letter-spacing:0.07em;text-transform:uppercase;color:#888;margin:2rem 0 0.75rem}
+.legend{display:flex;flex-wrap:wrap;gap:12px;margin-top:1.5rem;padding:0.75rem 1rem;border:0.5px solid #e0e0e0;border-radius:8px}
+.legend-item{display:flex;align-items:center;gap:6px;font-size:12px;color:#555}
 .legend-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
 .ld-purple{background:#7F77DD}.ld-teal{background:#1D9E75}.ld-blue{background:#378ADD}.ld-amber{background:#BA7517}.ld-gray{background:#888780}.ld-coral{background:#D85A30}.ld-red{background:#E24B4A}
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;margin-top:1rem}
-.card{background:var(--color-background-primary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);padding:1rem 1.25rem}
-.card-icon{font-size:18px;margin-bottom:0.5rem;color:var(--color-text-secondary)}
-.card h3{font-size:13px;font-weight:500;color:var(--color-text-primary);margin-bottom:0.35rem;display:flex;align-items:center;gap:6px}
-.card p{font-size:11.5px;color:var(--color-text-secondary);line-height:1.65}
+.card{background:#fff;border:0.5px solid #e0e0e0;border-radius:12px;padding:1rem 1.25rem}
+.card-icon{font-size:18px;margin-bottom:0.5rem;color:#888}
+.card h3{font-size:13px;font-weight:500;color:#1a1a1a;margin-bottom:0.35rem;display:flex;align-items:center;gap:6px}
+.card p{font-size:11.5px;color:#555;line-height:1.65}
 .role-badge{display:inline-block;font-size:10px;font-weight:500;padding:2px 7px;border-radius:4px;margin-bottom:0.5rem}
-.badge-eye{background:#EEEDFE;color:#534AB7}.badge-brain{background:#E1F5EE;color:#0F6E56}.badge-bridge{background:#FAEEDA;color:#854F0B}.badge-mem{background:#FAECE7;color:#993C1D}.badge-mcp{background:#FCEBEB;color:#A32D2D}
-@media(prefers-color-scheme:dark){
-  .badge-eye{background:#3C3489;color:#AFA9EC}.badge-brain{background:#085041;color:#5DCAA5}.badge-bridge{background:#633806;color:#EF9F27}.badge-mem{background:#712B13;color:#F0997B}.badge-mcp{background:#791F1F;color:#F09595}
-}
-.flow-bar{background:var(--color-background-secondary);border-radius:var(--border-radius-lg);padding:0.9rem 1.25rem;font-size:12.5px;color:var(--color-text-secondary);line-height:1.9}
-.flow-bar strong{color:var(--color-text-primary);font-weight:500}
-.mcp-note{margin-top:1rem;padding:0.75rem 1rem;border-left:3px solid #E24B4A;background:var(--color-background-secondary);border-radius:0 var(--border-radius-md) var(--border-radius-md) 0;font-size:12px;color:var(--color-text-secondary);line-height:1.7}
-.mcp-note strong{color:var(--color-text-primary);font-weight:500}
+.badge-eye{background:#EEEDFE;color:#534AB7}
+.badge-brain{background:#E1F5EE;color:#0F6E56}
+.badge-bridge{background:#FAEEDA;color:#854F0B}
+.badge-mem{background:#FAECE7;color:#993C1D}
+.badge-mcp{background:#FCEBEB;color:#A32D2D}
+.flow-bar{background:#f6f6f4;border-radius:12px;padding:0.9rem 1.25rem;font-size:12.5px;color:#555;line-height:1.9}
+.flow-bar strong{color:#1a1a1a;font-weight:500}
+.mcp-note{margin-top:1rem;padding:0.75rem 1rem;border-left:3px solid #E24B4A;background:#f6f6f4;border-radius:0 8px 8px 0;font-size:12px;color:#555;line-height:1.7}
+.mcp-note strong{color:#1a1a1a;font-weight:500}
+
+/* ===== SALES STRATEGY ===== */
+.sales-section{margin-top:3rem;padding-top:2rem;border-top:0.5px solid #e0e0e0}
+.sales-header{display:flex;align-items:center;gap:14px;margin-bottom:1.75rem}
+.sales-header-icon{width:40px;height:40px;border-radius:10px;background:#EEEDFE;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
+.sales-header-text h2{font-size:18px;font-weight:500;color:#1a1a1a;margin-bottom:3px}
+.sales-header-text p{font-size:12px;color:#777;line-height:1.5}
+.strat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.strat-card{background:#fff;border:0.5px solid #e0e0e0;border-radius:12px;padding:1.25rem;position:relative;overflow:hidden}
+.strat-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;border-radius:12px 12px 0 0}
+.strat-card.c1::before{background:#7F77DD}
+.strat-card.c2::before{background:#1D9E75}
+.strat-card.c3::before{background:#378ADD}
+.strat-card.c4::before{background:#E24B4A}
+.strat-num{font-size:11px;font-weight:500;letter-spacing:0.06em;margin-bottom:0.6rem}
+.strat-card.c1 .strat-num{color:#7F77DD}
+.strat-card.c2 .strat-num{color:#1D9E75}
+.strat-card.c3 .strat-num{color:#378ADD}
+.strat-card.c4 .strat-num{color:#E24B4A}
+.strat-title{font-size:14px;font-weight:500;color:#1a1a1a;margin-bottom:0.6rem;line-height:1.4}
+.strat-body{font-size:12px;color:#555;line-height:1.7}
+.strat-body strong{color:#1a1a1a;font-weight:500}
+.strat-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:0.9rem}
+.strat-tag{font-size:10px;font-weight:500;padding:2px 7px;border-radius:4px}
+.strat-card.c1 .strat-tag{background:#EEEDFE;color:#534AB7}
+.strat-card.c2 .strat-tag{background:#E1F5EE;color:#0F6E56}
+.strat-card.c3 .strat-tag{background:#E6F1FB;color:#185FA5}
+.strat-card.c4 .strat-tag{background:#FCEBEB;color:#A32D2D}
+.scenario-box{margin-top:0.9rem;background:#f6f6f4;border-radius:8px;padding:0.75rem 0.9rem}
+.scenario-box p{font-size:11px;color:#555;line-height:1.65;margin:0}
+.scenario-box p+p{margin-top:0.4rem}
+.scenario-box .sc-label{font-size:10px;font-weight:500;letter-spacing:0.05em;color:#999;margin-bottom:0.4rem}
 </style>
 
 <div class="page">
@@ -52,18 +85,17 @@
     <text x="450" y="248" text-anchor="middle" font-size="11" fill="#0F6E56" font-family="sans-serif">Joule Studio · Next Action Engine</text>
     <text x="450" y="264" text-anchor="middle" font-size="10" fill="#1D9E75" font-family="sans-serif">A2A protocol · Multi-agent orchestration</text>
 
-    <!-- CPI / Integration Suite -->
+    <!-- CPI -->
     <rect x="310" y="340" width="300" height="78" rx="10" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.8"/>
     <text x="460" y="366" text-anchor="middle" font-size="13" font-weight="500" fill="#633806" font-family="sans-serif">SAP CPI / Integration Suite</text>
     <text x="460" y="382" text-anchor="middle" font-size="11" fill="#854F0B" font-family="sans-serif">Integration bridge · 2,000+ templates · API mgmt</text>
     <text x="460" y="397" text-anchor="middle" font-size="10" fill="#BA7517" font-family="sans-serif">APIs &amp; Flows → convertible to MCP tools (MCP Gateway)</text>
     <text x="460" y="410" text-anchor="middle" font-size="10" fill="#BA7517" font-family="sans-serif">External Middleware compatible (MuleSoft, Boomi…)</text>
 
-    <!-- Joule <-> CPI arrows -->
     <line x1="420" y1="276" x2="420" y2="340" stroke="#0F6E56" stroke-width="1" marker-end="url(#ar)" opacity="0.55"/>
     <line x1="480" y1="340" x2="480" y2="276" stroke="#854F0B" stroke-width="1" marker-end="url(#ar)" opacity="0.55"/>
 
-    <!-- WalkMe box -->
+    <!-- WalkMe -->
     <rect x="20" y="218" width="205" height="100" rx="10" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.8"/>
     <text x="122" y="246" text-anchor="middle" font-size="14" font-weight="500" fill="#26215C" font-family="sans-serif">WalkMe</text>
     <text x="122" y="263" text-anchor="middle" font-size="11" fill="#534AB7" font-family="sans-serif">Eyes + Hands · Screen Overlay</text>
@@ -71,22 +103,17 @@
     <text x="122" y="295" text-anchor="middle" font-size="10" fill="#7F77DD" font-family="sans-serif">Reads DOM → Extracts Clean JSON</text>
     <text x="122" y="310" text-anchor="middle" font-size="10" fill="#7F77DD" font-family="sans-serif">38 languages · bulk sys config</text>
 
-    <!-- WalkMe -> Joule -->
     <path d="M225 255 L340 240" fill="none" stroke="#534AB7" stroke-width="1.2" marker-end="url(#ar)" opacity="0.65"/>
     <text x="282" y="238" text-anchor="middle" font-size="9.5" fill="#534AB7" font-family="sans-serif">Screen Context (Clean JSON)</text>
-
-    <!-- Joule -> WalkMe -->
     <path d="M340 260 L225 272" fill="none" stroke="#0F6E56" stroke-width="1.2" marker-end="url(#ar)" opacity="0.65"/>
     <text x="282" y="284" text-anchor="middle" font-size="9.5" fill="#0F6E56" font-family="sans-serif">Next Action guide &amp; auto-exec</text>
 
-    <!-- WalkMe Accelerator -->
+    <!-- Accelerator -->
     <rect x="20" y="368" width="205" height="72" rx="10" fill="#FAECE7" stroke="#993C1D" stroke-width="0.8"/>
     <text x="122" y="392" text-anchor="middle" font-size="13" font-weight="500" fill="#4A1B0C" font-family="sans-serif">WalkMe Accelerator</text>
     <text x="122" y="408" text-anchor="middle" font-size="10" fill="#993C1D" font-family="sans-serif">Pre-trained app screen library</text>
     <text x="122" y="422" text-anchor="middle" font-size="10" fill="#993C1D" font-family="sans-serif">SAP · SFDC · ServiceNow · Jira</text>
     <text x="122" y="435" text-anchor="middle" font-size="10" fill="#D85A30" font-family="sans-serif">Instant DOM pattern match → Clean JSON</text>
-
-    <!-- WalkMe <-> Accelerator -->
     <line x1="122" y1="318" x2="122" y2="368" stroke="#993C1D" stroke-width="0.9" marker-end="url(#ar)" opacity="0.55"/>
 
     <!-- MCP Gateway -->
@@ -96,11 +123,10 @@
     <text x="710" y="241" text-anchor="middle" font-size="10" fill="#A32D2D" font-family="sans-serif">CPI APIs → MCP Tools</text>
     <text x="710" y="255" text-anchor="middle" font-size="10" fill="#993C1D" font-family="sans-serif">Governed · auditable · RBAC</text>
 
-    <!-- Joule <-> MCP Gateway -->
     <line x1="560" y1="230" x2="630" y2="224" stroke="#A32D2D" stroke-width="1" marker-end="url(#ar)" opacity="0.6"/>
     <line x1="630" y1="238" x2="560" y2="244" stroke="#A32D2D" stroke-width="1" marker-end="url(#ar)" opacity="0.4"/>
 
-    <!-- External MCP servers -->
+    <!-- External MCP -->
     <rect x="660" y="310" width="220" height="120" rx="8" fill="none" stroke="#A32D2D" stroke-width="0.6" stroke-dasharray="5 3"/>
     <text x="770" y="332" text-anchor="middle" font-size="11" font-weight="500" fill="#791F1F" font-family="sans-serif">External MCP Servers</text>
     <text x="770" y="350" text-anchor="middle" font-size="10" fill="#A32D2D" font-family="sans-serif">Anthropic Claude (2026)</text>
@@ -108,11 +134,9 @@
     <text x="770" y="382" text-anchor="middle" font-size="10" fill="#A32D2D" font-family="sans-serif">MS 365 Copilot (A2A)</text>
     <text x="770" y="398" text-anchor="middle" font-size="10" fill="#A32D2D" font-family="sans-serif">SAP HANA Cloud (2026)</text>
     <text x="770" y="414" text-anchor="middle" font-size="10" fill="#993C1D" font-family="sans-serif">Any MCP-compatible agent tool</text>
-
-    <!-- MCP Gateway -> External MCP -->
     <line x1="710" y1="260" x2="770" y2="310" stroke="#A32D2D" stroke-width="1" marker-end="url(#ar)" opacity="0.55"/>
 
-    <!-- Business Applications -->
+    <!-- Business Apps -->
     <rect x="20" y="510" width="130" height="46" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.6"/>
     <text x="85" y="530" text-anchor="middle" font-size="12" font-weight="500" fill="#0C447C" font-family="sans-serif">SAP S/4HANA</text>
     <text x="85" y="546" text-anchor="middle" font-size="10" fill="#185FA5" font-family="sans-serif">Fiori · GUI · ECC</text>
@@ -137,25 +161,22 @@
     <text x="798" y="530" text-anchor="middle" font-size="12" font-weight="500" fill="#0C447C" font-family="sans-serif">M365 / Others</text>
     <text x="798" y="546" text-anchor="middle" font-size="10" fill="#185FA5" font-family="sans-serif">Copilot · Jira · Gmail</text>
 
-    <!-- Accelerator -> apps arrows -->
     <line x1="85" y1="440" x2="85" y2="510" stroke="#993C1D" stroke-width="0.8" marker-end="url(#ar)" opacity="0.45"/>
     <path d="M122 440 Q165 480 224 510" fill="none" stroke="#993C1D" stroke-width="0.8" marker-end="url(#ar)" opacity="0.35"/>
     <path d="M145 440 Q250 480 355 510" fill="none" stroke="#993C1D" stroke-width="0.8" marker-end="url(#ar)" opacity="0.25"/>
-
-    <!-- CPI -> apps arrows -->
     <path d="M390 418 Q390 480 363 510" fill="none" stroke="#854F0B" stroke-width="0.8" marker-end="url(#ar)" opacity="0.4"/>
     <line x1="460" y1="418" x2="513" y2="510" stroke="#854F0B" stroke-width="0.8" marker-end="url(#ar)" opacity="0.4"/>
     <line x1="490" y1="418" x2="658" y2="510" stroke="#854F0B" stroke-width="0.8" marker-end="url(#ar)" opacity="0.35"/>
     <path d="M590 418 Q700 470 795 510" fill="none" stroke="#854F0B" stroke-width="0.8" marker-end="url(#ar)" opacity="0.3"/>
 
-    <!-- User icon -->
+    <!-- User -->
     <circle cx="122" cy="120" r="24" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.8"/>
     <text x="122" y="116" text-anchor="middle" font-size="20" font-family="sans-serif">👤</text>
     <text x="122" y="134" text-anchor="middle" font-size="10" fill="#534AB7" font-family="sans-serif">Enterprise User</text>
     <line x1="122" y1="144" x2="122" y2="218" stroke="#534AB7" stroke-width="1" marker-end="url(#ar)" opacity="0.55"/>
     <text x="142" y="188" font-size="9.5" fill="#7F77DD" font-family="sans-serif">UI actions</text>
 
-    <!-- Joule Skills callout -->
+    <!-- Skills callout -->
     <rect x="270" y="188" width="60" height="88" rx="6" fill="none" stroke="#0F6E56" stroke-width="0.5" stroke-dasharray="3 2" opacity="0.5"/>
     <text x="300" y="208" text-anchor="middle" font-size="9" fill="#0F6E56" font-family="sans-serif">Skills</text>
     <text x="300" y="222" text-anchor="middle" font-size="9" fill="#0F6E56" font-family="sans-serif">templates</text>
@@ -164,16 +185,13 @@
     <text x="300" y="265" text-anchor="middle" font-size="9" fill="#1D9E75" font-family="sans-serif">defined</text>
     <line x1="330" y1="232" x2="340" y2="232" stroke="#0F6E56" stroke-width="0.8" marker-end="url(#ar)" opacity="0.5"/>
 
-    <!-- Divider -->
     <line x1="20" y1="490" x2="880" y2="490" stroke="#cccccc" stroke-width="0.5" stroke-dasharray="4 4" opacity="0.5"/>
     <text x="450" y="506" text-anchor="middle" font-size="10" fill="#888780" font-family="sans-serif">Business Application Layer — SAP &amp; Non-SAP</text>
 
-    <!-- NEW badge -->
     <rect x="634" y="167" width="56" height="16" rx="4" fill="#FCEBEB"/>
     <text x="662" y="179" text-anchor="middle" font-size="9" font-weight="500" fill="#A32D2D" font-family="sans-serif">NEW 2025/26</text>
   </svg>
 
-  <!-- Legend -->
   <div class="legend">
     <div class="legend-item"><div class="legend-dot ld-purple"></div>WalkMe — Eyes &amp; Hands</div>
     <div class="legend-item"><div class="legend-dot ld-teal"></div>SAP Joule — AI Brain (BTP)</div>
@@ -183,7 +201,6 @@
     <div class="legend-item"><div class="legend-dot ld-blue"></div>Business Applications</div>
   </div>
 
-  <!-- Role cards -->
   <p class="section-label">Core Component Roles</p>
   <div class="cards">
     <div class="card">
@@ -218,7 +235,6 @@
     </div>
   </div>
 
-  <!-- Data flow -->
   <p class="section-label">End-to-End Data Flow</p>
   <div class="flow-bar">
     User acts on any app screen →
@@ -229,8 +245,89 @@
     if external AI agent needed: <strong>MCP Gateway</strong> routes via open MCP standard → governed execution, fully auditable
   </div>
 
-  <!-- MCP note -->
   <div class="mcp-note">
     <strong>MCP &amp; A2A — 2025/2026 Announcements:</strong> At SAP TechEd 2025, SAP announced extensive MCP support across all business applications. The MCP Gateway (via Integration Suite) lets Joule agents communicate with any API or integration flow as an MCP tool — covering legacy SAP and third-party systems. SAP uses <strong>MCP internally</strong> (agent-to-tool, data access) and <strong>A2A externally</strong> (agent-to-agent across vendors, e.g. Joule ↔ Microsoft 365 Copilot). In 2026, SAP and Anthropic announced strategic integration of Claude into Joule via MCP, enabling Claude-powered agents to execute tasks across S/4HANA, SuccessFactors, Ariba, and third-party systems without custom code.
+  </div>
+
+  <!-- SALES STRATEGY -->
+  <div class="sales-section">
+    <div class="sales-header">
+      <div class="sales-header-icon">🎯</div>
+      <div class="sales-header-text">
+        <h2>Sales Strategy for WalkMe</h2>
+        <p>Four high-impact plays to accelerate pipeline and shorten time-to-value for enterprise prospects</p>
+      </div>
+    </div>
+
+    <div class="strat-grid">
+      <div class="strat-card c1">
+        <div class="strat-num">PLAY 01</div>
+        <div class="strat-title">Target Heavy SAP, Salesforce &amp; ServiceNow Customers — Quick ROI Win</div>
+        <div class="strat-body">
+          Customers running <strong>SAP, Salesforce, or ServiceNow</strong> are the fastest path to a closed deal. WalkMe's pre-built Accelerators and SAP Joule Skills are already mapped to these platforms — meaning <strong>shorter implementation cycles, faster outcomes,</strong> and measurable ROI without months of custom build work.
+          <br><br>
+          Lead with the fact that there is <strong>no backend change required</strong> — WalkMe runs as a browser overlay and Joule Skills plug into existing workflows from day one.
+        </div>
+        <div class="strat-tags">
+          <span class="strat-tag">Pre-built Accelerators</span>
+          <span class="strat-tag">Joule Skills</span>
+          <span class="strat-tag">Fast time-to-value</span>
+          <span class="strat-tag">No backend change</span>
+        </div>
+      </div>
+
+      <div class="strat-card c2">
+        <div class="strat-num">PLAY 02</div>
+        <div class="strat-title">Show &amp; Tell to Win — Demo-First, POC-Fast</div>
+        <div class="strat-body">
+          Abstract AI pitches lose deals. <strong>Live demos and rapid POCs win them.</strong> Use the pre-built Accelerators and Joule Skills to spin up a working prototype in days — not weeks.
+          <br><br>
+          Let the prospect <strong>see it working in their own application context.</strong> When a buyer watches WalkMe read their actual Fiori screen and Joule suggest the next action in real time, the sale moves from evaluation to approval.
+        </div>
+        <div class="strat-tags">
+          <span class="strat-tag">Rapid POC</span>
+          <span class="strat-tag">Live demo</span>
+          <span class="strat-tag">Customer-context proof</span>
+          <span class="strat-tag">Accelerate approval</span>
+        </div>
+      </div>
+
+      <div class="strat-card c3">
+        <div class="strat-num">PLAY 03</div>
+        <div class="strat-title">Cross-System Integration — Unlock Value Beyond SAP</div>
+        <div class="strat-body">
+          The biggest value-add stories come from <strong>bridging systems that don't normally talk.</strong> Use these concrete scenarios to build business cases:
+        </div>
+        <div class="scenario-box">
+          <p class="sc-label">KEY SCENARIOS</p>
+          <p>📋 <strong>SAP + Salesforce:</strong> Pull real-time CRM opportunity data from Salesforce directly into a SAP Fiori screen — no tab switching, no copy-paste, no rework.</p>
+          <p>🎫 <strong>SAP + ServiceNow:</strong> When an issue in SAP S/4HANA cannot be resolved locally, WalkMe + Joule automatically creates a ServiceNow ticket with full context pre-filled — zero manual effort.</p>
+        </div>
+        <div class="strat-tags">
+          <span class="strat-tag">SFDC → Fiori</span>
+          <span class="strat-tag">Auto ticket creation</span>
+          <span class="strat-tag">Cross-system context</span>
+        </div>
+      </div>
+
+      <div class="strat-card c4">
+        <div class="strat-num">PLAY 04</div>
+        <div class="strat-title">Infinite Scalability via MCP — Future-Proof the Investment</div>
+        <div class="strat-body">
+          Traditional middleware connectors suffer from <strong>version lag</strong> — every new feature from a SaaS vendor requires a connector update cycle that can take months. The MCP era eliminates this bottleneck.
+          <br><br>
+          <strong>Every major SaaS vendor is now racing to publish their own MCP server.</strong> Once a vendor ships an MCP server, Joule can import it immediately — no waiting for connector updates, no custom API work. The integration surface grows automatically as the ecosystem evolves.
+          <br><br>
+          Position this as an <strong>architectural moat:</strong> WalkMe + Joule + MCP means the customer's AI layer becomes more capable every time any vendor in their stack publishes a new MCP server.
+        </div>
+        <div class="strat-tags">
+          <span class="strat-tag">No version lag</span>
+          <span class="strat-tag">MCP ecosystem</span>
+          <span class="strat-tag">Instant import</span>
+          <span class="strat-tag">Future-proof</span>
+          <span class="strat-tag">Unlimited potential</span>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
